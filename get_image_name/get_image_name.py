@@ -7,7 +7,8 @@ def get_image_name(image_path, save_dir, save_name):
     save_file = save_dir + '/' + save_name
     txt_file = open(save_file, 'w')
     for name in names:
-        image_name = name[:-4] + '\n'
+        image_name = image_path+'/'+name + '\n'
+        #image_name = name[:-4] + '\n'
         txt_file.write(image_name)
     txt_file.close()
     print('Path Done!')
